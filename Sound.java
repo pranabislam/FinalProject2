@@ -23,6 +23,23 @@ public class Sound{
 	catch(LineUnavailableException e){
 	    e.printStackTrace();
 	}
+    
+	try {
+	    URL SoundURL = Sound.class.getResource("   ");
+	    AudioInputStream stream = AudioSystem.getAudioInputStream(SoundURL);
+	    clip.open(stream);
+	    
+	}
+
+	catch(LineUnavailableException e) {
+	    e.printStackTrace();
+	}
+	catch(UnsupportedAudioFileException ee){
+	    ee.printStackTrace();
+	}
+	catch(IOException eee){
+	    eee.printStackTrace();
+	}
     }
 
 }
