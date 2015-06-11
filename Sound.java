@@ -40,6 +40,15 @@ public class Sound{
 	catch(IOException eee){
 	    eee.printStackTrace();
 	}
+
+	clip.start();
+
+	do 
+	    {
+		try { Thread.sleep(50); } 
+		catch{InterruptedException ie) { ie.printStackTrace(); }
+	    } 
+	while (clip.isActive());
     }
 
 }
