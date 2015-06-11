@@ -5,6 +5,7 @@ public class Sound{
     
     public static Mixer mixxy;
     public static Clip clippy;
+    public static AudioFormat mic;
     public static void main(String[] args){
 	
 	Mixer.Info[] mixArray = AudioSystem.getMixerInfo();
@@ -15,7 +16,8 @@ public class Sound{
 
 	    }*/
 	mixxy = AudioSystem.getMixer(mixInfos[0]);
-	
+	mic = new AudioFormat(8000.0f, 16, 1, true, true);
+
 	DataLine.Info data = new DataLine.Info(Clip.class, null);
 	try {
 	    clip - (Clip)mixxy.getLine(data);
