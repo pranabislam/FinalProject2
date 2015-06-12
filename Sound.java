@@ -1,5 +1,6 @@
-import javax.sound.*;
 import javax.sound.sampled.*;
+import java.io.*;
+import java.net.URL;
 
 public class Sound{
     
@@ -15,12 +16,12 @@ public class Sound{
 	    System.out.println(info.getName() + "  -  " + info.getDescription());
 
 	    }*/
-	mixxy = AudioSystem.getMixer(mixInfos[0]);
+	mixxy = AudioSystem.getMixer(mixArray[0]);
 	mic = new AudioFormat(8000.0f, 16, 1, true, true);
 
 	DataLine.Info data = new DataLine.Info(Clip.class, null);
 	try {
-	    clip - (Clip)mixxy.getLine(data);
+	    clippy = (Clip)mixxy.getLine(data);
 		}
 	catch(LineUnavailableException e){
 	    e.printStackTrace();
@@ -29,7 +30,7 @@ public class Sound{
 	try {
 	    URL SoundURL = Sound.class.getResource("   ");
 	    AudioInputStream stream = AudioSystem.getAudioInputStream(SoundURL);
-	    clip.open(stream);
+	    clippy.open(stream);
 	    
 	}
 
@@ -43,14 +44,14 @@ public class Sound{
 	    eee.printStackTrace();
 	}
 
-	clip.start();
+	clippy.start();
 
 	do 
 	    {
 		try { Thread.sleep(50); } 
-		catch{InterruptedException ie) { ie.printStackTrace(); }
+		catch(InterruptedException ie) { ie.printStackTrace(); }
 	    } 
-	while (clip.isActive());
+	while (clippy.isActive());
     }
 
 }
