@@ -1,4 +1,4 @@
-import javax.sound.sampled*;
+import javax.sound.sampled.*;
 import java.io.*;
 
 public class Mic{
@@ -25,7 +25,7 @@ public class Mic{
 
 	    Thread thread = new Thread();
 	    {
-		@Override public void run()
+		//	@Override public void run();
 		{
 		    AudioInputStream audioStream = new AudioInputStream(targetLine);
 		    File audioFile = new File("Recording.wav");
@@ -40,6 +40,8 @@ public class Mic{
 	    Thread.sleep(5000);
 	    targetLine.stop();
 	    targetLine.close();
+	    
+	    System.out.println("Ended sound test");
 	}
 	catch(InterruptedException ie){
 	    ie.printStackTrace();
@@ -47,9 +49,7 @@ public class Mic{
 	catch(LineUnavailableException e){
 	    e.printStackTrace();
 	}
-	catch(IOException ee){
-	    ee.printStackTrace();
-	}
+        
     }
 
 
