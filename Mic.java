@@ -37,6 +37,7 @@ public class Mic{
 		    
 		}
 	    };
+	    thread.start();
 	    Thread.sleep(5000);
 	    targetLine.stop();
 	    targetLine.close();
