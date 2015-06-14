@@ -33,8 +33,9 @@ public class Mic{
 		    AudioInputStream audioStream = new AudioInputStream(targetLine);
 		    File audioFile = new File("Recording.wav");
 		    System.out.println("test5");
-		    try {AudioSystem.write(audioStream, AudioFileFormat.Type.WAVE, audioFile);
-			System.out.println("test000000");
+		    try { System.out.println("test9");
+			AudioSystem.write(audioStream, AudioFileFormat.Type.WAVE, audioFile);
+			System.out.println("audio writing test");
 		    }
 		    
 		    catch(IOException e){
