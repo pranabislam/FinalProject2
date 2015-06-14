@@ -22,17 +22,25 @@ public class Mic{
 
 	    System.out.println("Recording voice");
 	    targetLine.start();
-
+	    
 	    Thread thread = new Thread();
+	    
 	    {
-		//	@Override public void run();
+		//@Override public void run();
+		
 		{
+		    
 		    AudioInputStream audioStream = new AudioInputStream(targetLine);
 		    File audioFile = new File("Recording.wav");
-		    try {AudioSystem.write(audioStream, AudioFileFormat.Type.WAVE, audioFile);}
+		    System.out.println("test5");
+		    try {AudioSystem.write(audioStream, AudioFileFormat.Type.WAVE, audioFile);
+			System.out.println("test000000");
+		    }
+		    
 		    catch(IOException e){
 			e.printStackTrace();
 		    }
+		    System.out.println("test6");
 		    System.out.println("Recording Stopped");
 		    
 		}
