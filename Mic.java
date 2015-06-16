@@ -34,11 +34,14 @@ public class Mic{
 		    File audioFile = new File("Recording.wav");
 		    System.out.println("test5");
 		    try { System.out.println("test9");
+			System.out.println(audioFile.canWrite());
+			
 			AudioSystem.write(audioStream, AudioFileFormat.Type.WAVE, audioFile);
+		        
 			System.out.println("audio writing test");
 		    }
 		    
-		    catch(IOException e){
+		    catch(Throwable e){
 			e.printStackTrace();
 		    }
 		    System.out.println("test6");
