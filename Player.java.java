@@ -44,7 +44,7 @@ public class Player{
     public int getHandSum() {
 	
 	int handSum = 0;
-	
+       
 	int cardNum; 
 	int numAces = 0;
 
@@ -70,6 +70,19 @@ public class Player{
 	
 	
 	
+    }
+
+    public void printHand(boolean firstCard){
+	
+	System.out.printf("%s's cards:\n", this.name);
+	for (int x = 0; x<this.numCards; x++){
+	    if (x == 0 && !firstCard){
+		System.out.println("   [hidden]");
+	    }
+	    else {
+		System.out.printf("  %s\n", this.hand[x].toString());
+	    }
+	}
     }
 
 }
