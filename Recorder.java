@@ -61,7 +61,7 @@ public class Recorder {
  
  
     public static void main(String[] args) {
-        final JavaSoundRecorder recorder = new JavaSoundRecorder();
+        final Recorder recorder = new Recorder();
  
 
         Thread stopper = new Thread(new Runnable() {
