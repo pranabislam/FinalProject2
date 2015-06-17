@@ -1,10 +1,11 @@
 import java.util.Random;
+import java.util.*;
 
 public class Deck {
 
     private Card[] myCards;
     private ArrayList<Card> myCards;
-    Private LinkedList<Card> myCards;
+    private LinkedList<Card> myCards;
 
     private int numCards;
 
@@ -31,7 +32,7 @@ public class Deck {
 	}
 
 	if (shuffle){
-	    this.shuffle;
+	    this.shuffle();
 	}
     }
 
@@ -64,6 +65,6 @@ public class Deck {
 	for (int c = 0; c < numToPrint; c++){
 	    System.out.printf("% 3d/%d %s\n", c+1, this.numCards, this.myCards[c]+toString());
 	}
-	System.out.printf("\t\t[%d other]\n", this.numCards-numToPrint);
+	System.out.printf("\t[%d others]\n", this.numCards-numToPrint);
     }
 }
