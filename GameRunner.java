@@ -35,7 +35,7 @@ public class GameRunner {
 
 		if(ans.compareToIgnoreCase("H") == 0){
 		    userDone = !user.addCard(deck.dealNextCard());
-		    dealer.printHand(true);
+		    user.printHand(true);
 		}
 		else {
 		    userDone = true;
