@@ -4,9 +4,7 @@ import java.util.*;
 public class Deck {
 
     private Card[] myCards;
-    private ArrayList<Card> myCards;
-    private LinkedList<Card> myCards;
-
+  
     private int numCards;
 
     public Deck(){
@@ -14,7 +12,7 @@ public class Deck {
     }
 
     public Deck (int numDecks, boolean shuffle){
-	this.numCards = numDeck * 52; 
+	this.numCards = numDecks * 52; 
 	this.myCards = new Card[this.numCards];
 
 	int c = 0;
@@ -25,7 +23,7 @@ public class Deck {
 
 		for (int n = 1; n <= 13; n++){
 
-		    this.myCards[c] = newCard(Suit.values()[s], n);
+		    this.myCards[c] = new Card(Suit.values()[s], n);
 		    c++;
 		}
 	    }
@@ -54,10 +52,8 @@ public class Deck {
 	for (int c = 1; c < this.numCards; c++){
 	    this.myCards[c-1] = this.myCards[c];
 	}
-	this.myCards[c-1] = this.myCards[c];
-
+	this.myCards[this.numCards-1] = null;
 	this.numCards--;
-
 	return top;
     }
 
