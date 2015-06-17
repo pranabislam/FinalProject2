@@ -7,8 +7,8 @@ import javax.sound.sampled.AudioSystem;
 
 public class WavAppender {
     public static void main(String[] args) {
-	String wavFile1 = "Recording.wav";
-	String wavFile2 = "Beat.wav";
+	String wavFile1 = "Beat1.wav";
+	String wavFile2 = "Recording.wav";
 
 	try {
 	    AudioInputStream clip1 = AudioSystem.getAudioInputStream(new File(wavFile1));

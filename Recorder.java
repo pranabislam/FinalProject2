@@ -5,7 +5,7 @@ import java.io.*;
 public class Recorder {
     static final long RECORD_TIME = 60000;  // 1 minute
  
-    File wavFile = new File("Recording.wav");
+    File wavFile = new File("Beat1.wav");
  
     AudioFileFormat.Type fileType = AudioFileFormat.Type.WAVE;
  
